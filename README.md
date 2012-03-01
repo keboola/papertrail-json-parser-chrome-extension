@@ -1,6 +1,6 @@
 # PaperTrail Linkificator Bookmarklet
 
-PLB helps you to linkify URLs in PaperTrail logs.
+This boormarklet helps you to create link from URLs in PaperTrail logs.
 
 The URLs can be escaped - eg.
 
