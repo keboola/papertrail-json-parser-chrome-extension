@@ -13,7 +13,7 @@
 
 				// Do not process again
 				if (jQuery.data(elem, "paperTrailLinkificatorProcessed")) {
-					return false;
+					return true;
 				}
 
 				// Match and process
