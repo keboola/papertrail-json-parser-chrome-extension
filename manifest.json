@@ -1,0 +1,11 @@
+{
+  "name": "PaperTrail Linkificator Bookmarklet",
+  "version": "1.0",
+  "description": "This extension helps you to create link from URLs in PaperTrail logs and to display JSON data in logs.",
+  "content_scripts": [
+   {
+      "matches": ["https://papertrailapp.com/*"],
+      "js": ["bookmarklet.min.js"]
+   }
+   ]
+}
