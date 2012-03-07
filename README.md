@@ -1,6 +1,6 @@
 # PaperTrail Linkificator Bookmarklet
 
-This boormarklet helps you to create link from URLs in PaperTrail logs.
+This boormarklet helps you to create link from URLs in PaperTrail logs and to display JSON data in logs.
 
 The URLs can be escaped - eg.
 
