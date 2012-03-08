@@ -18,7 +18,7 @@ $.extend($.expr[':'],{
 	var json2Html = function(json) {
 		var html = "{<ul>";
 		jQuery.each(json, function(key, value) {
-			if (typeof value == "object") {
+			if (typeof value == "object" && value != null) {
 				value = json2Html(value);
 			}
 			html += "<li><strong>" + key + "</strong>: " + value + "</li>";
