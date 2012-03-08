@@ -36,8 +36,6 @@ Copy and paste the bookmarklet.min.js content to the bookmark's URL. You can als
 
 <a href="javascript:var script=document.createElement("script");script.src="https://raw.github.com/keboola/PaperTrail-Linkificator-Bookmarklet/master/linkificator.min.js?rand="+Math.random();document.getElementsByTagName("head")[0].appendChild(script);">Make PT log nicer</a>
 
-Further instructions for using bookmarklets
-
 # Browser Support
 
 Tested in
@@ -48,7 +46,7 @@ Tested in
 
 # Chrome Extension
 
-This bookmarklet can be used also as a Chrome Extension in Developer mode. You do not need to run the script, the logs are formatted automatically.
+This bookmarklet can be used also as a Chrome Extension in Developer mode. You do not need to run the script, the logs are formatted automatically. This extension as an PT icon, so that you can deactivate it in case it is doing something wrong.
 
 Installation instructions:
 

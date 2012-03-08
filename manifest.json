@@ -8,7 +8,7 @@
 	"content_scripts":[
 		{
 			"matches":["https://papertrailapp.com/*"],
-			"js":["chrome-extension/jquery.js", "linkificator.js"]
+			"js":["chrome-extension/jquery.js", "bookmarklet.min.js"]
 		}
 	],
 	"permissions": [
