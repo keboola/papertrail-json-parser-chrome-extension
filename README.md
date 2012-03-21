@@ -2,7 +2,7 @@
 
 This boormarklet helps you to create link from URLs in PaperTrail logs and to display formatted JSON data in logs.
 
-The bookmarklet runs in a 5 second loop, so if you scroll up / down the log, the links would linkify automatically. If you do not want to wait 5 seconds, run the bookmarklet again.
+The bookmarklet is bound to the PaperTrail events, so if you scroll up / down the log, the links would linkify automatically. If you do not want to wait 5 seconds, run the bookmarklet again.
 
 ## Linkification
 
