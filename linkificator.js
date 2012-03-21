@@ -102,9 +102,9 @@ $.extend($.expr[':'],{
 	// Run periodically every 5 seconds, if not running
 	if (!window.paperTrailLinkificatorBookmarkletRunning) {
 		window.paperTrailLinkificatorBookmarkletRunning = true;
-		window.setInterval(function(){
-			parse();
-		}, 5000);
+		$('#event_list').bind('papertrail:eventsLoaded', function() {
+			parse()
+		});
 	}
 
 }(window));
