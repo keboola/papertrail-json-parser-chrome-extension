@@ -46,8 +46,4 @@ Tested in
 
 # Chrome Extension
 
-This bookmarklet can be used also as a Chrome Extension in Developer mode. You do not need to run the script, the logs are formatted automatically. This extension as an PT icon, so that you can deactivate it in case it is doing something wrong.
-
-Installation instructions:
-
-http://code.google.com/chrome/extensions/getstarted.html#load
+Download and install from https://s3.amazonaws.com/keboola-chrome-extensions/papertrail.crx
