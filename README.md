@@ -34,7 +34,7 @@ is transformed to
 
 Copy and paste the bookmarklet.min.js content to the bookmark's URL. You can also drag'n'drop this link to your bookmark bar:
 
-<a href="javascript:var script=document.createElement("script");script.src="https://raw.github.com/keboola/PaperTrail-Linkificator-Bookmarklet/master/linkificator.min.js?rand="+Math.random();document.getElementsByTagName("head")[0].appendChild(script);">Make PT log nicer</a>
+<a href="javascript:var script=document.createElement("script");script.src="https://s3.amazonaws.com/keboola-chrome-extensions/PaperTrail-Linkificator-Bookmarklet/linkificator.min.js?rand="+Math.random();document.getElementsByTagName("head")[0].appendChild(script);">Make PT log nicer</a>
 
 # Browser Support
 
