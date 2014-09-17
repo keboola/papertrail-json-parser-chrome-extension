@@ -15,17 +15,35 @@ $.extend($.expr[':'],{
 	var urlEscapedExp = /(\b(http|https):(\\\/\\\/|\/\/)[-A-Z0-9+&@#\\\/%?=~_|!:,.;]*[-A-Z0-9+&@#\\\/%=~_|])/ig;
 	var escapeExp = /\\/g;
 
+	var replaceUrls = function(str) {
+		// Match and process
+		if (typeof str == 'string') {
+			var matches = str.match(urlEscapedExp);
+			if (matches) {
+				for(i=0; i < matches.length; i++) {
+					var match = matches[i];
+					var clearMatch = match.replace(escapeExp, "");
+					str = str.replace(match, '<a href="' + clearMatch + '" target="_blank">' + clearMatch + '</a>');
+				}
+			}		
+		}
+		return str;
+	}
+
 	var json2Html = function(json) {
 		var html = "{<ul>";
 		jQuery.each(json, function(key, value) {
 			if (typeof value == "object" && value != null) {
 				value = json2Html(value);
+			} else {
+				value = replaceUrls(value)
 			}
 			html += "<li><strong>" + key + "</strong>: " + value + "</li>";
 		});
 		html += "</ul>}";
 		return html;
 	};
+
 
 	var parse = function() {
 		// Detect position
@@ -67,16 +85,6 @@ $.extend($.expr[':'],{
 					changed = true;
 					var message = json2Html(json);
 					e.html(message);
-				}
-
-				// Match and process
-				var matches=e.html().match(urlEscapedExp);
-				if (matches) {
-					for(i=0; i < matches.length; i++) {
-						var match = matches[i];
-						var clearMatch = match.replace(escapeExp, "");
-						e.html(e.html().replace(match,'<a href="' + clearMatch + '" target="_blank">' + clearMatch + '</a>'));
-					}
 				}
 
 				// Mark as processed
