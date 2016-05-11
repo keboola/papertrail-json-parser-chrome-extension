@@ -1,19 +1,12 @@
-# PaperTrail Linkificator Bookmarklet
+# PaperTrail JSON Parser
 
-This boormarklet helps you to create link from URLs in PaperTrail logs and to display formatted JSON data in logs.
+This Chrome Extension helps you to show JSON data in PaperTrail in a nicer way.
 
-The bookmarklet is bound to the PaperTrail events, so if you scroll up / down the log, the links would linkify automatically. If you do not want to wait 5 seconds, run the bookmarklet again.
+The extension is bound to the PaperTrail events, so if you scroll up / down the log, the JSON will be parsed automatically. 
 
-## Linkification
+## Installation
 
-The URLs can be escaped - eg.
-
-	http:\/\/bit.ly\/123456
-	http://bit.ly/123456
-
-and bookmarklet creates a link like this:
-
-	<a href="http://bit.ly/123456" target="_blank">http://bit.ly/123456</a>
+Grab the extension from [Chrome Web Store](https://chrome.google.com/webstore/detail/papertrail-json-parser/bccgamaeidlhnfodhdpkpekmbkoniofo).
 
 ## JSON formatting
 
@@ -29,21 +22,14 @@ is transformed to
 		key2: value2
 	}
 
+## Linkification
 
-# Installation
+The URLs can be escaped - eg.
 
-Copy and paste the bookmarklet.min.js content to the bookmark's URL. You can also drag'n'drop this link to your bookmark bar:
+	http:\/\/bit.ly\/123456
+	http://bit.ly/123456
 
-<a href="javascript:var script=document.createElement("script");script.src="https://s3.amazonaws.com/keboola-chrome-extensions/PaperTrail-Linkificator-Bookmarklet/linkificator.min.js?rand="+Math.random();document.getElementsByTagName("head")[0].appendChild(script);">Make PT log nicer</a>
+and bookmarklet creates a link like this:
 
-# Browser Support
+	<a href="http://bit.ly/123456" target="_blank">http://bit.ly/123456</a>
 
-Tested in
-
-  * Chrome 17
-  * Firefox 7
-  * IE 9
-
-# Chrome Extension
-
-Download and install from https://s3.amazonaws.com/keboola-chrome-extensions/papertrail.crx
