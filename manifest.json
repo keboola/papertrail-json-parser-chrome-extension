@@ -1,9 +1,9 @@
 {
 	"manifest_version": 2,
-	"name":"PaperTrail JSON Parser",
+	"name":"Papertrail JSON Parser",
 	"short_name":"PT JSON Parser",
-	"version": "0.1.1.1",
-	"description":"Parse JSON content in PaperTrail log.",
+	"version": "0.1.1.2",
+	"description":"Parse JSON content in Papertrail log.",
 	"web_accessible_resources": ["script.js"],
 	"content_scripts":[
 		{

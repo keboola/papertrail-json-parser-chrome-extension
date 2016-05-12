@@ -1,8 +1,8 @@
-# PaperTrail JSON Parser
+# Papertrail JSON Parser
 
-This Chrome Extension helps you to show JSON data in PaperTrail in a nicer way.
+This Chrome Extension helps you to show JSON data in Papertrail in a nicer way.
 
-The extension is bound to the PaperTrail events, so if you scroll up / down the log, the JSON will be parsed automatically. 
+The extension is bound to the Papertrail events, so if you scroll up / down the log, the JSON will be parsed automatically. 
 
 ## Installation
 
