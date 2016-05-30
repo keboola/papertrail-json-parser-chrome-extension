@@ -109,6 +109,10 @@ $.extend($.expr[':'],{
 		$("#event_list").bind("papertrail:eventsLoaded", function(){
 			parse();
 		});
+		$("#event_list").bind("papertrail:loaded", function(){
+			parse();
+		});
+
 	}
 
 }(window));
