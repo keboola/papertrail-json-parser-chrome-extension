@@ -33,3 +33,6 @@ and bookmarklet creates a link like this:
 
 	<a href="http://bit.ly/123456" target="_blank">http://bit.ly/123456</a>
 
+## HTML Stripping
+
+A Papertrail update in December 2016 started injecting HTML links into the logs. Before trying do parse JSON all HTML links are removed.

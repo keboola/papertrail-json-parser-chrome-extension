@@ -14,13 +14,14 @@ $.extend($.expr[':'],{
 	// Regulars
 	var urlEscapedExp = /(\b(http|https):(\\\/\\\/|\/\/)[-A-Z0-9+&@#\\\/%?=~_|!:,.;]*[-A-Z0-9+&@#\\\/%=~_|])/ig;
 	var escapeExp = /\\/g;
+	var findHtmlTags = /<a[^>]*>|<\/a>/g;
 
 	var replaceUrls = function(str) {
 		// Match and process
 		if (typeof str == 'string') {
 			var matches = str.match(urlEscapedExp);
 			if (matches) {
-				for(i=0; i < matches.length; i++) {
+				for(var i=0; i < matches.length; i++) {
 					var match = matches[i];
 					var clearMatch = match.replace(escapeExp, "");
 					str = str.replace(match, '<a href="' + clearMatch + '" target="_blank">' + clearMatch + '</a>');
@@ -68,9 +69,19 @@ $.extend($.expr[':'],{
 					return true;
 				}
 
+				// escape all html injected inside
+				// find all injected html strings
+				var escapedText = e.html();
+				var matches = escapedText.match(findHtmlTags);
+				if (matches) {
+					for(var i=0; i < matches.length; i++) {
+						escapedText = escapedText.replace(matches[i], "");
+					}
+				}
+
 				// parse JSON
 				try {
-					var json = jQuery.parseJSON(e.html());
+					var json = jQuery.parseJSON(escapedText);
 				} catch (err) {
 					// No JSON
 					// Do nothing, really
