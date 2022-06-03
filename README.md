@@ -46,3 +46,7 @@ Build is stored in `./build/extension.zip`
 
     ./build.sh
     
+
+## License
+
+MIT licensed, see [LICENSE](./LICENSE) file.
